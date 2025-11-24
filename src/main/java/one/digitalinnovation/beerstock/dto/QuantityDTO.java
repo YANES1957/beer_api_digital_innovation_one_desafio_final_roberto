@@ -1,20 +1,20 @@
 package one.digitalinnovation.beerstock.dto;
 
-import lombok.AllArgsConstructor;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
-
-@Data
+@Getter
+@Setter
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class QuantityDTO {
 
-    @NotNull
-    @Max(100)
+    @NotNull(message = "O id da cerveja não pode ser nulo")
+    private Long id;
+
+    @NotNull(message = "A quantidade não pode ser nula")
+    @Min(value = 1, message = "A quantidade mínima deve ser 1")
     private Integer quantity;
 }

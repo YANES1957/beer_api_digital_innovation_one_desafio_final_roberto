@@ -1,42 +1,43 @@
 package one.digitalinnovation.beerstock.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 import one.digitalinnovation.beerstock.enums.BeerType;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class BeerDTO {
 
-    private Long id;
-
     @NotNull
-    @Size(min = 1, max = 200)
+    @Size(min = 1, max = 50)
     private String name;
 
     @NotNull
-    @Size(min = 1, max = 200)
+    @Size(min = 1, max = 50)
     private String brand;
 
     @NotNull
-    @Max(500)
-    private Integer max;
+    private BeerType type;
 
-    @NotNull
-    @Max(100)
+    @Min(0)
     private Integer quantity;
 
-    @Enumerated(EnumType.STRING)
-    @NotNull
-    private BeerType type;
+    @Max(100)
+    private Integer max;
+
+    // Getters e Setters
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getBrand() { return brand; }
+    public void setBrand(String brand) { this.brand = brand; }
+
+    public BeerType getType() { return type; }
+    public void setType(BeerType type) { this.type = type; }
+
+    public Integer getQuantity() { return quantity; }
+    public void setQuantity(Integer quantity) { this.quantity = quantity; }
+
+    public Integer getMax() { return max; }
+    public void setMax(Integer max) { this.max = max; }
 }
