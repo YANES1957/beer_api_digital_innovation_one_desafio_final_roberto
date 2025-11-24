@@ -89,7 +89,7 @@ Este projeto serve para:
 💻 Criar um portfólio completo, incluindo funcionalidades, testes e documentação
 
 🔴 Autor
-
-César Roberto Yanes
-🔴 GitHub: YANES1957
+ Roberto Césaer Yanes
+ 
+🔴Meu GitHub: YANES1957
 
