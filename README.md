@@ -1,56 +1,95 @@
-<h2>Digital Innovation: Expert class - Desenvolvimento de testes unitários para validar uma API REST de gerenciamento de estoques de cerveja.</h2>
+🔴 Beer API - Gerenciamento de Estoque de Cervejas 🍺🚀
 
-Nesta live coding, vamos aprender a testar, unitariamente, uma API REST para o gerenciamento de estoques de cerveja. Vamos desenvolver testes unitários para validar o nosso sistema de gerenciamento de estoques de cerveja, e também apresentar os principais conceitos e vantagens de criar testes unitários com JUnit e Mockito. Além disso, vamos também mostrar como desenvolver funcionalidades da nossa API através da prática do TDD.
+ *Sobre o projeto
 
-Durante a sessão, serão abordados os seguintes tópicos:
+Este projeto é uma API REST desenvolvida em Spring Boot para gerenciamento de estoques de cerveja. Criado com foco em testes unitários, TDD e QA Automation, serve como exemplo prático para portfólio e estudos avançados de testes automatizados.
 
-* Baixar um projeto através do Git para desenolver nossos testes unitários. 
-* Apresentação conceitual sobre testes: a pirâmide dos tipos de testes, e também a importância de cada tipo de teste durante o ciclo de desenvolvimento.
-* Foco nos testes unitários: mostrar o porque é importante o desenvolvimento destes tipos de testes como parte do ciclo de desenvolvimento de software.
-* Principais frameworks para testes unitários em Java: JUnit, Mockito e Hamcrest. 
-* Desenvolvimento de testes unitários para validação de funcionalides básicas: criação, listagem, consulta por nome e exclusão de cervejas.
-* TDD: apresentação e exemplo prático em 2 funcionaliades importantes: incremento e decremento do número de cervejas no estoque.
+Funcionalidades principais:
 
-Para executar o projeto no terminal, digite o seguinte comando:
+🍺 Criação de cervejas no estoque
 
-```shell script
-mvn spring-boot:run 
-```
+📜 Listagem de cervejas
 
-Para executar a suíte de testes desenvolvida durante a live coding, basta executar o seguinte comando:
+🔍 Consulta por nome
 
-```shell script
-mvn clean test
-```
+❌ Exclusão de cervejas
 
-Após executar o comando acima, basta apenas abrir o seguinte endereço e visualizar a execução do projeto:
+Organizado em camadas estruturadas, garantindo manutenção simples e escalabilidade.
 
-```
-http://localhost:8080/api/v1/beers
-```
+🔴 Tecnologias e frameworks utilizados
 
-São necessários os seguintes pré-requisitos para a execução do projeto desenvolvido durante a aula:
+🟢 Spring Boot: desenvolvimento da API
 
-* Java 14 ou versões superiores.
-* Maven 3.6.3 ou versões superiores.
-* Intellj IDEA Community Edition ou sua IDE favorita.
-* Controle de versão GIT instalado na sua máquina.
-* Muita vontade de aprender e compartilhar conhecimento :)
+🟢 H2 Database: banco de dados em memória
 
-Abaixo, seguem links bem bacanas, sobre tópicos mencionados durante a aula:
+🟢 JUnit: testes unitários
 
-* [SDKMan! para gerenciamento e instalação do Java e Maven](https://sdkman.io/)
-* [Referência do Intellij IDEA Community, para download](https://www.jetbrains.com/idea/download)
-* [Palheta de atalhos de comandos do Intellij](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
-* [Site oficial do Spring](https://spring.io/)
-* [Site oficial JUnit 5](https://junit.org/junit5/docs/current/user-guide/)
-* [Site oficial Mockito](https://site.mockito.org/)
-* [Site oficial Hamcrest](http://hamcrest.org/JavaHamcrest/)
-* [Referências - testes em geral com o Spring Boot](https://www.baeldung.com/spring-boot-testing)
-* [Referência para o padrão arquitetural REST](https://restfulapi.net/)
-* [Referência pirâmide de testes - Martin Fowler](https://martinfowler.com/articles/practical-test-pyramid.html#TheImportanceOftestAutomation)
+🟢 Mockito: simulação de dependências
 
-[Neste link](https://drive.google.com/file/d/1KPh19mvyKirorOI-UsEYHKkmZpet3Ks6/view?usp=sharing), seguem os slides apresentados como o roteiro utilizado para o desenvolvimento do projeto da nossa sessão.
+🟢 Cucumber: testes BDD (Behavior Driven Development)
 
+🟢 Homecrest: geração de dados de teste
 
+🟢 Postman: testes manuais de endpoints
+
+🟢 Swagger: documentação interativa da API
+
+🔴 Testes automatizados
+
+O projeto inclui testes unitários e BDD para validar todas as funcionalidades:
+
+✅ JUnit + Mockito: validação da lógica de negócio
+
+✅ Cucumber: testes de integração e aceitação, seguindo TDD
+
+✅ Homecrest: dados de teste automatizados
+
+Esses testes garantem que criação, listagem, consulta e exclusão de cervejas funcionem corretamente mesmo após alterações no código.
+
+🔴 Testes finais da API
+
+Além dos testes automatizados, os endpoints foram validados com:
+
+🟠 Postman: simulação de requisições HTTP para verificar todas as funcionalidades
+
+🟠 Swagger: documentação interativa e prática para explorar os endpoints
+
+Esses testes complementam a prática de QA Automation e asseguram o funcionamento real da aplicação.
+
+🔴 Estrutura do projeto
+beer_api_digital_innovation_one
+│
+├─ src/main/java
+│   ├─ controller    -> endpoints da API
+│   ├─ service       -> lógica de negócio
+│   ├─ repository    -> interação com o banco de dados
+│   ├─ model         -> entidades
+│   ├─ dto           -> objetos de transferência
+│   ├─ mapper        -> conversão entre entidades e DTOs
+│   └─ config        -> configurações do projeto
+│
+├─ src/test/java
+│   ├─ service       -> testes unitários
+│   ├─ steps         -> steps do Cucumber
+│   └─ bdd           -> testes de integração BDD
+│
+├─ pom.xml           -> dependências do Maven
+└─ README.md         -> documentação do projeto
+
+🔴 Finalidade do projeto
+
+Este projeto serve para:
+
+🚀 Praticar TDD (Test Driven Development)
+
+🧪 Criar testes unitários e automatizados
+
+🌐 Demonstrar conhecimento em Spring Boot e endpoints REST
+
+💻 Criar um portfólio completo, incluindo funcionalidades, testes e documentação
+
+🔴 Autor
+
+César Roberto Yanes
+🔴 GitHub: YANES1957
 
